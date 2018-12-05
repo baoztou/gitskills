@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+          #box{
+              height:auto;
+              overflow: hidden;
+              width:200px;
+              border:1px solid #ddd
+          }
+          #box .fadeIn,#box .fadeOut,#box .fadeToggle,#box .fadeTo{
+             width:100%;
+             height:35px;
+             border:none;
+             line-height: 35px;
+          }
+            .fade{
+                width:100;
+                background: red;
+                height:100px;
+                opacity: 0.5;
+            }
+     </style>
+</head>
+<body>
+    <div id="box">
+         <button class="fadeIn" type="button">fadeIn</button>
+         <button class="fadeOut" type="button">fadeOut</button>
+         <button class="fadeTo" type="button">fadeTo</button>
+         <button class="fadeToggle" type="button">fadeToggle</button>
+        <div class="fade"></div>
+    </div>
+
+    <script>
+        $('.fadeIn').click(function(){
+            $('.fade').fadeIn();
+        })
+        $('.fadeOut').click(function(){
+            $('.fade').fadeOut();
+        })  
+        $('.fadeTo').click(function(){
+            $('.fade').fadeTo(600,1);
+        })
+        $('.fadeToggle').click(function(){
+            $('.fade').fadeToggle();
+        })      
+          
+    </script>
+</body>
+</html>

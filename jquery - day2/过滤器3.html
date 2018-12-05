@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+      <div>
+        <ul id="q">
+                <li><a href="">晶</a></li>
+                <li class="a"><a href="">周</a></li>
+                <li><a href="">刘</a></li>
+                <li class="a"><a href="">陈晶</a></li>
+                <div  class="a"><p></p></div>
+    </ul>
+</div>
+    <input type="text" value="1111">
+    <script>
+        // $("li:contains('陈')").css("background",'red')
+        // console.log($('p:empty'))
+        // $('ul').has('.a').addClass('')
+        // $(':parent').addClass('aaa')
+
+        // $('li').parents().css("background",'red')
+        $('li').parentsUntil('body').css("background",'red')
+    </script>
+</body>
+</html>

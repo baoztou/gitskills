@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+
+        *{}
+       div,p,span{
+
+       }
+    </style>
+    <script>
+       $(function(){
+
+          if($('#box').length>0){
+            $('#box').css('background','red');
+            $('li').css('background','blue')
+            $('.a').css('background','orange')
+            }else{
+                alert('节点不存在')
+            }
+
+          console.log($('ul,li,.a').css('background','#000'))
+          console.log($('ul li').css('background','#ddd'))
+          console.log($('*'))
+
+       })
+    </script>
+</head>
+<body>
+   <ul id="box">
+       <li>1</li>
+       <li>2</li>
+       <li class="a">3</li>
+       <li>4</li>
+       <li>5</li>
+   </ul>
+
+</body>
+</html>

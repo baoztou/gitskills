@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="yuxin.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        // jQuery(function(){
+        //     jQuery('body').css('background','#000').css('color','#fff')
+        // })
+
+        // $(function(){
+        //     $('body').css('background','#000').css('color','#fff')
+        // })
+
+
+        // &(document).ready(function(){
+        //      alert(1)
+        // })
+
+        jQuery.noConflict();   //释放$的所有权
+        var _ = jQuery;
+        _(function(){
+            console.log(_('#box').length)
+            console.log(document.getElementById('box'))
+            console.log($.getId('box'))
+        })
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+
+
+    <script>
+    //   console.log($.getId('box'))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 常规选择器</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<style>
+    #nav{
+       display: flex;
+       list-style: none;
+    }
+    li{
+        background: #000;
+        color:#fff
+    }
+  .active{
+      background: #fff;
+      color:#000
+  }
+</style>
+</head>
+<body>
+   
+    <ul id='nav'>
+        <li title="a-aaa">刘小凡</li>
+        <li title="a-ccc">应华</li>
+        <li>陈晶</li>
+        <li>蒋圣福</li>
+        <li>姚国亮</li>
+        <li>王璐</li>
+    </ul>
+  
+    <script>
+        $('#nav').children('li').click(function(){
+            $(this).addClass('active').siblings('li').removeClass('active');
+            // 等价
+           // $(this).addClass('active').prevAll('li').removeClass('active');
+           // $(this).addClass('active').nextAll('li').removeClass('active');
+        })
+
+        // $('[title="a"]').css('background',"red") 
+        // $('[title^="a"]').css('background',"red") //开头A
+        $('[title$="a"]').css('background',"red")  
+
+
+        // find()  后代
+        // next()  相领的下一个
+        // nextAll()  相领的下面的所有
+        // children()  子代
+
+        // querySelector
+        // querySelectorAll
+
+    </script>
+   
+</body>
+</html>

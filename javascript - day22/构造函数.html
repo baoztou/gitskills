@@ -4,7 +4,6 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <pre>
@@ -26,27 +25,27 @@
 //    }
 
 
-            function Box(username,age){
-                this.username = username;
-                this.age = age;
-                this.run = function(){
-                    return this.username + "欢迎您回来"
-                }
-            }
+            // function Box(username,age){
+            //     this.username = username;
+            //     this.age = age;
+            //     this.run = function(){
+            //         return this.username + "欢迎您回来"
+            //     }
+            // }
 
-            function Box2(username,age){
-                // var obj = new Obect()
-                this.username = username;
-                this.age = age;
-                this.run = function(){
-                    return this.username + "欢迎您回来"
-                }
-                // return obj
-            }
+            // function Box2(username,age){
+            //     // var obj = new Obect()
+            //     this.username = username;
+            //     this.age = age;
+            //     this.run = function(){
+            //         return this.username + "欢迎您回来"
+            //     }
+            //     // return obj
+            // }
 
 
-            var hjk = new Box('何俊克',18);
-            var gtl = new Box2('古天乐',40);
+            // var hjk = new Box('何俊克',18);
+            // var gtl = new Box2('古天乐',40);
             // alert(gtl.run())
             // alert(hjk instanceof Object)
             // alert(gtl instanceof Box2)
@@ -69,8 +68,43 @@
             // 执行构造函数内的代码
             // 返回一个新对象（后台直接返回）
 
-            username = '111'
-            alert(this.username)
+            //username = '111'
+            //alert(this.username)
+
+
+            // alert(Box('何俊克',18))
+
+            // var o = new Object();
+            // Box.call(o,'刘小凡',200);
+
+            // alert(o.run())
+
+
+
+            function Box(username,age){
+                this.username = username;
+                this.age = age;
+                this.run = function(){
+                    return this.username + "欢迎您回来"
+                }
+            }
+
+            function Box2(username,age){
+                this.username = username;
+                this.age = age;
+                this.run = function(){
+                    return this.username + "欢迎您回来"
+                }
+            }
+
+           var a = new Box('ying',100)
+           var b = new Box('ying',100)
+
+        //    alert(a.username == b.username)  //true
+           
+           alert(a.run == b.run)
+
+            
         </script>
     </body>
 </html>

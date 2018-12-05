@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       div{
+           position: fixed;
+           width:60%;
+           height:500px;
+           background: red;
+       }
+    </style>
+</head>
+<body>
+    <button id="btn" type="button">执行</button>
+    <script>
+    window.onload=function(){
+         var oBtn = document.getElementById('btn');
+         var oBody = document.getElementsByTagName('body')[0];
+         oBtn.addEventListener('click',function(){
+             var oDiv = document.createElement('div');
+             var oSpan = document.createElement('span')
+             var oText = document.createTextNode('关闭');
+             oDiv.setAttribute('id','box');
+             oSpan.setAttribute('id','close');
+             oDiv.appendChild(oSpan);
+             oSpan.appendChild(oText);
+             oDiv.style.left=(document.body.clientWidth-oDiv.offsetWidth)/2+'px'
+             oBody.appendChild(oDiv);
+                var oClose = document.getElementById('close');
+                oClose.addEventListener('click',function(){
+                    this.parentNode.remove()
+                })
+         })
+}
+
+    </script>
+</body>
+</html>

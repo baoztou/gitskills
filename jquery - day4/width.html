@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            height:5000px
+        }
+       div{
+        width:100px;
+        height:100px;
+        padding:10px;
+        margin:10px;
+        position: relative;
+        border:10px solid #ddd
+       }
+ p{
+     position: absolute;
+     left:30px;
+     background:red;
+     width:50px;
+     height:50px;
+ }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+
+    </div>
+   <script>
+    //   console.log($('div').width())
+    //   $('div').width(400)
+
+        //  $('div').width(function(index,value){
+        //      return value - 50
+        //  })
+
+    //   console.log($('div').height())
+
+       
+    //   console.log($('div').innerWidth())  //包含内边距
+    //   console.log($('div').outerWidth())  //包含内边距+边框border
+    //   console.log($('div').outerWidth(true))  //包含内边距+边框border+外边距
+
+    //   console.log($('div').offset().left);  //相对于视窗口的偏移
+
+    //   console.log($('p').position().left);  //相对于父元素的偏移
+
+ 
+     $(document).click(function(){
+         var height = $(document).height()
+        console.log($(window).scrollTop(height))
+     })
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+   <ul>
+       <li title="aaa"><strong style="color:red">1</strong></li>
+       <li>2</li>
+       <li>3</li>
+       <li>4</li>
+       <li><input type="text" value="1" /></li>
+       <li><strong style="color:red">6</strong></li>
+   </ul>
+    <script>
+       
+    //    $('li').first().html(1)
+    // //    document.write($('li').last().text())
+    // var val =  $('li').first().html();
+    // $('li').first().html(val+'9')
+    // alert($('input').val())
+
+    $('li').html(function(index){
+        return index + '你好'
+    })
+
+    $('li').attr('title',function(index){
+        return index + '你好' 
+    })
+    
+
+    $('li').removeAttr('title')
+
+
+    </script>
+</body>
+</html>

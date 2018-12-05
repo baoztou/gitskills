@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <form id="formAdd" action="">
+        <input type="text" value="1111">
+        <button type="submit">submit</button>
+    </form>
+    <p><input type="text" /> <span>focusout fire</span></p>
+    <p><input type="password" /> <span>focusout fire</span></p>
+    <button id="btn" type="button">button</button>
+
+    <script>
+    //    $('#formAdd').submit(function(e){
+    //         e.preventDefault();
+    //         console.log($('input[type=text]').val())
+    //    })
+
+    //    $('#formAdd').trigger('submit')
+
+
+    //    $('#formAdd').submit(function(e){
+    //         e.preventDefault();
+    //         console.log($('input[type=text]').val())
+    //    }).trigger('submit')
+
+    
+    //    $('#formAdd').submit(function(e,data1,data2){
+    //         e.preventDefault();
+    //         alert(data1,data2)
+    //    }).trigger('submit',[123,'abc'])  
+
+//   $('#btn').bind('a',function(){
+//       alert('aaa')
+//   }).trigger('a');
+
+//   $('#btn').bind('click',function(){
+//       alert('aaa')
+//   }).click();
+
+
+    //  blur 失焦
+    //  focusin  focus
+    $("p").focusout(function() {
+  $(this).find("span").css('display','none').fadeIn(1000);
+});
+    </script>
+</body>
+</html>

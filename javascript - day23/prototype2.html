@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型（prototype）</title>
+</head>
+<body>
+    <pre>
+       我们创建的每个函数都有一个prototype（原型）属性，这个属性其实是一个对象，原型
+       对象的用途可以包含由特定类型的所有的实例共享的属性和方法。通过调用构造函数而创
+       建的对象的原型对象。原来的优点可以让所有的对象实例共享它所包含的属性和方法。这
+       句话的意思是说，我们不必在构造函数中定义对象信息，而是直接在原型上定义这些信息
+       （添加到信息到原型中）。
+    </pre>
+
+    <script>
+        function Obj(){} //声明了一个构造函数
+
+        Obj.prototype = {
+            constructor:Obj,
+            name:"应煜鑫",
+            height:174,
+            run:function(){
+                return this.name;
+            }
+        }
+      
+    //    不允许重写，会被复盖
+        Obj.prototype = {
+            height:184
+        } 
+
+        var obj = new Obj();
+        
+        alert(obj.height)
+        // alert(obj instanceof Obj)
+        // alert(obj instanceof Object)
+    //    alert(obj.constructor == Obj)
+    //    alert(obj.constructor == Object)
+
+    </script>
+</body>
+</html>

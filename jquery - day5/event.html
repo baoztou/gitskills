@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+           *{
+               transition:all 600ms
+           }
+        </style>
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+        <div>
+            <input type="text">
+            <span id="error"></span>
+        </div>
+
+        <!-- jQuery -->
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="js/bootstrap.js"></script>
+
+
+        <script>
+        //    $('.text-center').bind('click',111,fn)
+        //    function fn(e){
+        //        console.log(e.data)
+        //    }
+        var n =1;
+        // $('.text-center').bind('mouseout mouseover',function(){
+        //     $('div').html(function(index,value){
+        //         return '<span style="font-size:100px">'+ n++ +'</span>';
+        //     })
+        // })
+
+
+    //     $('.text-center').bind({
+    //         'mouseout':function(){
+    //             $('div').css({
+    //                 "background":"red",
+    //                 "height":"120px"
+    //             })
+    //         },
+    //         'mouseover':function(){
+    //             $('div').css({
+    //                 "background":"blue",
+    //                 "width":"120px"
+    //             })
+    //         }
+    //     })
+
+    //    $('.text-center').unbind('mouseover');
+        
+      
+    // $('.text-center').bind('click',fn);
+    // $('.text-center').bind('click',fn2);
+
+    // function fn(){
+    //     alert(1)
+    // }
+
+    // function fn2(){
+    //     alert(2)
+    // }
+ 
+    // $('.text-center').unbind('click',fn);
+
+
+// $('input').bind('blur',function(){
+//    alert($(this).val())
+// })
+
+    //    $('.text-center').bind({
+    //         'mouseenter':function(){
+    //             $('div').css({
+    //                 "background":"red",
+    //                 "height":"120px",
+    //                 "width":"120px",
+    //             })
+    //         },
+    //         'mouseleave':function(){
+    //             $('div').css({
+    //                 "background":"blue",
+    //             })
+    //         }
+    //     })
+    
+
+   //$('input').keydown(function(e){
+    //     console.log(e.keyCode)
+    //    if((e.keyCode>=48 && e.keyCode<=57) || e.keyCode==8 || e.keyCode==46 || e.keyCode==37 || e.keyCode==39){
+    //       $('#error').html('')
+    //    }else{
+    //         $('#error').html('qq必须是数字')
+    //        return false
+    //    }
+    // })
+
+    // $('input').focus(function(){
+    //      alert(1)
+    // })
+
+    // $('div').focusin(function(){
+    //      console.log(21)
+    // })
+
+    // $('.text-center').hover(function(){
+    //     $(this).css('background','black');
+    //     var html = $(this).html()
+    //     $('input').val(html)
+    //     $('div').css({
+    //                 "background":"red",
+    //                 "height":"120px",
+    //                 "width":"120px",
+    //             })
+    // },function(){
+    //     $(this).css('background','red');
+    //     $('input').val('')
+    //     $('div').css({
+    //            "background":"blue",
+    //            "height":"220px",
+    //                 "width":"220px",
+    //      })
+    // })
+
+    //  $('h1').toggle(function(){
+    //       $(this).css('background','black')
+    //  },function(){
+    //       $(this).css('background','blue')
+    //  },function(){
+    //       $(this).css('background','red')
+    //  })
+   var flag = 1;
+   $('h1').click(function(){
+       if(flag==1){
+         $(this).css('background','black')
+         flag = 2;
+       }else if(flag==2){
+         $(this).css('background','blue')
+         flag = 3;
+       }else if(flag==3){
+          $(this).css('background','red') 
+          flag =1;
+       }
+   })
+
+    
+        </script>
+    </body>
+</html>

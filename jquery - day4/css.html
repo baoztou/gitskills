@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+       .blue{
+           color:blue;
+       }
+       .font{
+           font-size:55px
+       }
+    </style>
+</head>
+<body>
+   <div style="height:200px;width:100px;background-color: red"></div>
+
+   <ul>
+       <li>1</li>
+       <li>2</li>
+       <li class="blue">3</li>
+       <li>4</li>
+       <li>5</li>
+   </ul>
+
+    <script>
+        //  console.log($('div').css('height','200px'))
+        var arrbox = $('div').css(['height','width','background-color']);
+        // console.log(arrbox)
+
+        // for (const key in arrbox) {
+        //     if (arrbox.hasOwnProperty(key)) {
+        //         const element = arrbox[key];
+        //         console.log(element)
+        //     }
+        // }
+
+        // $.each(arrbox,function(attr,value){
+        //      console.log(attr+':'+value)
+        // })
+
+        // $('ul>li').each(function(index,el){
+        //     console.log(index,el)
+        // })
+
+        // $('li').css({
+        //     "color":"red",
+        //     "background":"blue",
+        //     "font-size":"55px"
+        // })
+
+        // $('div').css('height',function(index,value){
+        //     return (parseInt(value) + 100) + 'px';
+        // })
+
+        
+        // $('li').eq(2).addClass('blue font')
+        // $('li').eq(2).removeClass('font')
+        
+        // $('div').click(function(){
+        //     if ($('li').eq(2).hasClass('font')) {
+        //         $('li').eq(2).removeClass('font')
+        //     }else{
+        //         $('li').eq(2).addClass('font')
+        //     }
+        // })
+
+        // $('div').click(function(){
+        //     $('li').eq(2).toggleClass('font')    
+        // })  
+
+        
+    
+    </script>
+</body>
+</html>

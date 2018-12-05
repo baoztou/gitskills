@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <input type="text" value=''>
+    <div id="box"></div>
+    <script>
+        $('input').keyup(function () {
+            var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?qq-pf-to=pcqq.group';
+            $.ajax({
+                url: url,
+                method: 'get',
+                data: {
+                    wd: $('input').val()
+                },
+                dataType: 'jsonp',
+                jsonp: 'cb',
+                success: function (res) {
+                    //    console.log(res.s)
+                    $('#box').html('')
+                    $.each(res.s, function (index, value) {
+                        $('#box').append('<p>' + value + '</p>')
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <style>
+  	  
+  	  .a{
+  	  	background: blue;
+  	  	height:10px;
+  	  }
+
+  </style>
+</head>
+<body>
+
+
+
+	<div class="a">
+		<span>1</span>
+	</div>
+	<div>
+		<span>2</span>
+	</div>
+
+	<div>
+		<span>3</span>
+	</div>
+
+<div class="a">
+		<span>1</span>
+	</div>
+	<script>	
+   /*
+   		var oDiv = document.createElement('div');
+   		oDiv.innerHTML = '1'
+		var oSpan = $('<span>你好</span>')
+		var oBody = document.getElementsByTagName('body')[0]
+		oBody.appendChild(oDiv)
+		$(oDiv).append(oSpan)
+
+	   var oSpan = $('<div>你好</div>');
+	   $('body').append(function(index,html){
+            return '<div>1111</div>';
+	   })
+   */
+    
+   // $('span').appendTo($('div'))
+   // $('<span>1111</span>').prependTo('div')
+    
+    // $('div').prepend('<span>1111</span>')
+    // 
+    
+	// $('div').after('<p>后面</p>')
+	// $('div').before('<p>前面</p>')
+
+
+	// $('div').after(function(index,html){
+	// 	return '<p>后面2</p>';
+	// })
+	// $('div').before(function(index,html){
+	// 	return '<p>前面2</p>';
+	// })
+
+   // $('span').insertAfter('div')
+   // $('p').insertBefore('div')
+   // 
+   // $('div').wrap('<div class="extra-wrapper"><header>1111</header></div>')
+   // $('div').unwrap()
+   // $('div').unwrap()
+   // 
+   // $('div').wrapAll('<div class="extra-wrapper"><header>1111</header></div>')
+   // 
+    // $('div').wrapInner('<span class="extra-wrapper"></span>')
+     
+
+    $('.a').click(function(){
+    	alert(1)
+    })
+
+
+    // var cloneDiv = $('div').clone()
+    // $('body').append(cloneDiv)
+    // 
+    // $('div').remove('.a')
+
+     // $('div').empty()
+     // 
+     $('div').replaceWith($('<span>111</span>'));
+     
+
+	</script>
+
+
+
+
+</body>
+</html>

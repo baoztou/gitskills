@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型（prototype）</title>
+</head>
+<body>
+    <pre>
+       我们创建的每个函数都有一个prototype（原型）属性，这个属性其实是一个对象，原型
+       对象的用途可以包含由特定类型的所有的实例共享的属性和方法。通过调用构造函数而创
+       建的对象的原型对象。原来的优点可以让所有的对象实例共享它所包含的属性和方法。这
+       句话的意思是说，我们不必在构造函数中定义对象信息，而是直接在原型上定义这些信息
+       （添加到信息到原型中）。
+    </pre>
+
+
+    <script>
+        function Obj(){
+            // this.name = "陈晶"
+        } //声明了一个构造函数
+        Obj.prototype.name = "应煜鑫";    //原型属性
+        Obj.prototype.height = 174;
+        Obj.prototype.run  = function(){    //原型方法
+            return this.name + this.height
+        }
+
+        Obj.prototype.name = "应煜鑫2222";    //原型属性
+
+        var obj = new Obj();
+        var obj2 = new Obj();
+
+        //alert(obj.run == obj2.run)   //原型方法的引用地址保持一致
+        // console.log(obj.__proto__)
+        // console.log(Obj.prototype) 
+        // 判断一个对象，是否指向了构造函数的原型对象，isPrototypeOf
+        // alert(Obj.prototype.isPrototypeOf(obj))
+        // 原型模式 执行流程
+        // 1，选查找构造函数实例里的属性和方法，如果有，就立刻返回
+        // 2，如果没有，就去它的原型对象里面找，如果有就返回
+        // obj.name = "陈晶"
+        // alert(obj.name)   //陈晶
+        // alert(obj2.name)  //原型里的属性， 应煜鑫
+
+        // delete obj.name;
+         alert(obj.name)   //应煜鑫
+
+
+        // alert(obj.hasOwnProperty('name'));  //实例里面有NAME这个属性。就返回true 。如果没有就是false
+
+        // alert('name' in obj)  //实例或原型当中有其一，就返回true
+
+        function isProperty(obj,Property){
+            return !obj.hasOwnProperty(Property) && (Property in obj)
+        }
+
+       alert(isProperty(obj,'name'))  //实例或原型当中有其一，就返回true
+
+    </script>
+</body>
+</html>

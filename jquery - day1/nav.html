@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+         $(function(){
+             var arr = [
+                 {title:"首页",url:"index.html"},
+                 {title:"关于我们",url:"about.html"},
+                 {title:"留言",url:"message.html"}
+             ]
+
+             $.each(arr,function(index,value){
+                 $('#nav').append(function(){
+                      return '<li><a href='+value.url+'>'+value.title+'</a></li>'
+                 })
+             })
+
+
+         })
+    </script>
+</head>
+<body>
+    <ul id='nav'>
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 常规选择器</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+    <div id="box">
+        <ul>
+                    <p>0</p>
+            <p>0</p>
+            <p>0</p>
+            
+            <p>0</p>
+            <div>div</div>
+            <p>0</p>
+            <div>div</div>
+            <div>div</div>
+            <span>111</span>
+            <em>333</em>
+            <li class="link">
+                <div>1
+                    <div>2</div>
+                </div>
+            </li>
+            <em>erw</em>
+            <span>ewrw</span>
+            <div>0</div>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+          
+            <p>1</p>
+            <p>1</p>
+        </ul>
+    </div>
+
+    <script>
+        // $('.link>div').css('border','1px solid #ddd')
+        // $('.link').children('div').css('border','4px solid #ddd')
+        
+        // $('.link+p').css('border','4px solid #ddd')
+        // $('.link').next('p').css('border','4px solid #ddd')
+        // $('.link~p').css('border','4px solid #ddd')
+    //    $('.link').nextAll('p').css('border','4px solid #ddd')
+
+        // $('.link').prev('p').css('border','4px solid #ddd')
+        // $('.link').prevAll('p').css('border','4px solid red')
+
+        // $('.link').prevUntil('p').css('border','4px solid red')
+        // 同级上非指定元素选定，遇到则停止
+      
+        // $('.link').nextUntil('p').css('border','4px solid red')
+        // 同级下非指定元素选定，遇到则停止          
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    function(){
+           
+    //    }
+     
+    //  (function(name){
+    //      alert(name)
+    //  })(11111)
+
+
+    // function box(){
+    //     var a = '周思彤'
+    //     return function(){
+    //         return a;
+    //     }
+    // }
+    // var a = box();
+    // alert(a())
+    // alert(a)
+
+    // var age = 1;
+    // function box(){
+    //     age ++;
+    // }
+    // box()
+    // box()
+    // alert(age)
+
+
+    // function box(){
+    //     var age = 1;
+    //     return function(){
+    //         age ++;
+    //         return age
+    //     }
+    // }
+    
+    // var b = box();
+    // alert(b())
+    // alert(b())
+    // alert(b())
+
+    
+
+    // function box(){
+    //     var arr = [];
+    //     var i ;
+    //     for(i=0;i<10;i++){
+    //         arr[i]=function(){
+    //             return i;
+    //         }
+    //     }
+    //     return arr
+    // }
+      
+    // var b = box();
+    // // alert(b.length)
+    // for(var i=0;i<b.length;i++){
+    //     document.write(b[i]())
+    // }
+
+    function box(){
+         var arr = [];
+         for(var i = 0; i<10;i++){
+             arr[i] = (function(n){
+                return n;
+             })(i)
+         }
+         return arr
+    }
+
+        var b = box();
+    for(var i=0;i<b.length;i++){
+        document.write(b[i])
+    }
+    </script>
+</body>
+</html>

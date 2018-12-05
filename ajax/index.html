@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="ajax.js"></script>
+</head>
+<body>
+    <form id="add">
+        <input type="text" name="user" id="user">
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        
+        document.getElementById('add').addEventListener('submit',function(e){
+            e.preventDefault()
+            ajax.request({
+                method:"post",
+                url:'post.php',
+                data:{
+                    user:document.getElementById('user').value,
+                },
+                success:function(response){
+                    console.log(response)
+                }
+            })
+        },false)
+        
+          
+
+
+        </script>
+</body>
+</html>

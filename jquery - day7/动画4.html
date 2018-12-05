@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+     #box{
+         width:150px;
+         height:150px;
+         background: red;
+         position: relative;
+     }
+     </style>
+</head>
+<body>
+  <button class="animate">animate</button>
+  <div id="box">蒋圣福刚才在玩手机</div>
+  <script>
+    //   $('.animate').click(function(){
+    //       $('#box').animate({
+    //           width:"400px",
+    //           height:"200px",
+    //           fontSize:"+=50px",
+    //           opacity:1,
+    //           left:"+=100px",
+    //           top:"100px"
+    //       },2000,function(){
+    //           alert('蒋圣福刚才在玩手机')
+    //       })
+    //   })
+
+        //   $('.animate').click(function(){
+        //   $('#box').animate({ opacity:1}).animate({ width:"400px"}).animate({ height:"400px"}).animate({ fontSize:"40px"})
+    //   })
+
+    //   $('.animate').click(function(){
+    //       $('#box').animate({
+    //           'left':'100px'
+    //       },function(){
+    //         $(this).animate({
+    //               'top':'100px'
+    //           },function(){
+    //             $(this).animate({
+    //                   'width':"400px"
+    //               },function(){
+    //                   $(this).animate({
+    //                       width:"200px"
+    //                   },function(){
+    //                       $(this).css('background','blue')
+    //                   })
+    //               })
+    //           })
+    //       })
+    //   })  
+
+     
+    
+    $('#box').slideUp(600).slideDown(600).queue(function(){
+        $(this).css('background','blue')
+    })
+
+
+
+
+  </script>
+</body>
+</html>

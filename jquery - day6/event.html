@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件对象（event）</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+    $(function(){
+        // $('#btn').on('click',[{user:'yingyuxin'},{age:111}],function(e){
+        //      if(e.type==='click'){
+        //          alert('这是一个单击事件')
+        //          console.log(e.target)
+        //          alert(e.data[0].user)
+        //      }
+        // })
+
+        // $('div').on('mouseover mouseout',function(e){
+        //       console.log(e.relatedTarget)
+        //       $(e.relatedTarget).css('background','red');
+        // })
+
+        // $('div').hover(function(e){
+        //     $(e.relatedTarget).css('background','red');
+        // },function(e){
+        //     $(e.relatedTarget).css('background','blue');
+        // })
+
+        // $('div').click(function(e){
+        //       console.log(e.currentTarget,e.target)
+        //     //   e.target得到的是触发元素的DOM，e.currentTarget得到的是监听元素的DOM  this也是得到的监听元素的DOM
+        // })
+
+        // $('div').click(function(e){
+        //     return 111
+        // })
+
+
+        // $('div').click(function(e){
+        //     alert(e.result)
+        // })
+
+        // $('div').mouseup(function(e){
+        //        console.log(e.which)
+        // })
+
+        // $('div').mouseup(function(e){
+        //      if(e.ctrlKey===true &&  e.altKey===false){
+        //         $(e.target).css('background','red')
+        //      }else if(e.ctrlKey===true && e.altKey===true){
+        //         $(e.target).css('background','blue')
+        //      }
+        // })
+ 
+//    atom
+
+    //    $(document).mousedown(function(e){
+    //         var start = e.clientX;
+    //         $(document).mousemove(function(e){
+    //              var end = e.clientX;
+    //              if(start - end>200){
+    //                  $(e.target).css('background','red')
+    //              }
+    //         })
+    //     })
+       
+
+        // $(document).contextmenu(function(e){
+        //       e.preventDefault(); //阻止默认事件
+        //       console.log(1211)
+        // })
+
+        //  $('#form1').submit(function(e){
+        //     e.preventDefault();
+        //     $('#success').html(function(){
+        //         return $('#val').val()
+        //     })
+        //     // return false
+        // })
+          
+        $('#btn').click(function(e){
+            alert('我是按扭1')
+            e.stopImmediatePropagation()   //取消冒泡并取消后续事件的处理
+        }) 
+
+        $('#btn').click(function(e){
+            alert('我是按扭2')
+            // e.stopImmediatePropagation()   //取消冒泡并取消后续事件的处理
+            // e.isImmediatePropagationStopped() 判断是一执行了stopImmediatePropagation方法
+        }) 
+
+        $('#sss').click(function(e){
+            alert('我是div')
+            e.stopPropagation(); //阻止冒泡
+            alert(e.isPropagationStopped())  //判断是否调用了stopPropagation方法
+        })
+        $('body').click(function(){
+            alert('我是body')
+        })
+ 
+        // $('input').keyup(function(e){
+        //     //   e.preventDefault();
+        //     //   alert(e.isDefaultPrevented())
+        // })
+    })
+    </script>
+</head>
+<body style="height:500px;">
+<!-- 
+    <button type="button" id="btn">普通按扭</button>
+    <div style="width:100px;height:100px;border:1px solid #ddd"></div>
+
+    <form id="form1">
+        <input type="text" id="val">
+        <span id="success"></span>
+        <button type="submit">提交按扭</button>
+    </form> -->
+
+
+    <div id="sss">
+        <input type="button" id="btn" name="" value="button">
+    </div>
+
+
+</body>
+</html>

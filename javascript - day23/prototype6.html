@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function Obj(name,height){
+           this.name = name;     //实例属性
+           this.height = height;
+           this.arr = ['a',"b","c"];
+               
+            if(typeof this.run !="function"){
+                console.log('实例开始  -- 开始分配内存地址')
+                Obj.prototype.run = function(){
+                    return this.name + this.height + this.arr
+                }
+                console.log('实例结束  -- 内存地址分配结束')
+            }
+        };
+
+       var obj = new Obj('宋晓梁',175);
+        obj.arr.push('d')
+        alert(obj.run())
+        var obj2 = new Obj('刘小凡',175);
+        // obj.arr.push('d')
+        alert(obj2.run())
+
+
+        
+       var obj = new Obj('宋晓梁',175);
+        obj.arr.push('d')
+        alert(obj.run())
+        var obj2 = new Obj('刘小凡',175);
+        // obj.arr.push('d')
+        alert(obj2.run())
+    </script>
+</body>
+</html>

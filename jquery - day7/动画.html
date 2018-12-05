@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+          div{
+              display: none;
+              background: red;
+              height:100px;
+              width:100px;
+          }
+     </style>
+</head>
+<body>
+    <button class="show" type="button">show()</button>
+    <button class="hide" type="button">hide()</button>
+    <button class="toggle" type="button">toggle()</button>
+    <div></div>
+    <div></div>
+    <script>
+    //    $('.show').click(function(){
+    //          $('div').show(600,function(){
+    //             $('div').hide(200,function(){
+    //                 $('div').show(600)
+    //             })
+    //          })
+    //    })
+    //    $('.hide').click(function(){
+    //          $('div').hide(200)
+    //    })
+
+    //    $('.show').click(function(){
+    //          $('div').eq(0).show(600,function showDiv(){
+    //             $(this).next().show(400,showDiv)
+    //          })
+    //    })
+
+    //    $('.hide').click(function(){
+    //          $('div').eq(0).hide(600,function(){
+    //             $(this).next().hide(400,arguments.callee)
+    //          })
+    //    })
+
+       $('.toggle').click(function(){
+            $('div').first().toggle(600)
+       })
+
+       
+    </script>
+</body>
+</html>

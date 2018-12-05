@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <ol>
+        <li></li>
+        <li></li>
+        <li class='a'  title="111"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <ol>
+        <li></li>
+    </ol>
+    <script>
+    // console.log($('.a').is('li'))
+    // console.log($('.a').is($('li')))  集合
+    // console.log($('.a').is($('li').eq(2)))  //单个
+    // console.log($('.a').is($('li').get(2)))  //单个
+    // console.log($('.a').is(function(){
+    //     return $(this).attr('title')=='111';
+    //     // $(this) 和 this 的区别
+    // }))  
+
+    // if($('li').eq(2).hasClass('a')){
+    //     $('li').eq(2).removeClass('a').siblings('li').addClass('a')
+    //     // alert('刘小凡')
+    // }else{
+    //     // alert('何仙姑')
+    // }
+        // $('li').eq(2).has('a')? alert('1'):alert('2')
+
+        // $('li').slice(1,3).css('background','red')
+       
+
+        // console.log($('ol').find('li').end().get(0))
+
+// $('li').filter('.a').css('background','red')
+
+    </script>
+</body>
+</html>

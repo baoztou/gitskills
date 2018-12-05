@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <form id="formAdd" action="">
+        <input type="text" value="1111">
+        <button type="submit">submit</button>
+    </form>
+    <form id="formAdd2" action="">
+            <input type="text" value="1111">
+            <button type="submit">submit</button>
+        </form>
+
+
+        <div>
+                1111
+            </div>
+
+    <script>
+
+ 
+
+
+        // $('form').submit(function (e) {
+        //     e.preventDefault()
+        //     alert(1)
+        // })
+
+        // $('form').trigger('submit')
+
+        // console.log($('form').submit(function (e) {
+        //     e.preventDefault()
+        //    return 124
+        // }).trigger('submit'))
+// trigger  不会触发默认事件  会执行到所有的   返回当前包含的事件触发元素的jq对象
+// triggerHandler   会触发阻止默认事件  只会执行到第一个  他有返回值
+// trigger 创建事件的时候会冒泡，这种冒泡是自定义事件才会提现出来的。这种冒泡是基于jquery扩展于dom的机制。并非DOM特性
+// triggerHandler不会冒泡
+    
+    var i= 1;
+    $('div').bind('myevent',function(){
+        alert(i);
+        i++;
+    }).trigger('myevent')
+    
+
+    </script>
+</body>
+
+</html>
